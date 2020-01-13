@@ -16,6 +16,7 @@
   The enter key was pressed
 */
 
+//Program Start
 //Importing header file
 
 const header = require('../dahir-header.js');
@@ -44,3 +45,4 @@ switch (eventKeyCode) {
   default:
     console.log('Unrecognized key.');
 }
+//program end

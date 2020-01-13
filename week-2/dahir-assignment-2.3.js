@@ -7,6 +7,7 @@
 ;===========================================
 */
 
+//Starting program
 //Importing header file
 
 const header = require('../dahir-header.js');
@@ -15,7 +16,6 @@ const header = require('../dahir-header.js');
 
 console.log(header.display("Zach", "Dahir", "Assignment 2.3"));
 
-//Starting program
 // Function property
 
 myName.zach = "Zach Dahir";
