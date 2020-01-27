@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+ ===========================================
+; Title: Assignment 7.3
+; Author: Zach Dahir
+; Date: 01-20-2020
+; Description:Create two shopping lists
+===========================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 7.3</title>
+  <link rel="stylesheet" href="../site.css">
+</head>
+<body>
+  <script>
+    document.write(`
+    <h1>Shopping List v.1</h1>
+    <ol>
+      <li>Apples</li>
+      <li>Oranges</li>
+      <li>Pears</li>
+      <li>Limes</li>
+      <li>Lemons</li>
+    </ol>`);
+</script>
+
+<div id="list"></div>
+<script>
+document.getElementById("list").innerHTML =
+"<h1> Shopping list v.2</h1>" +
+"<table>" +
+"<thead>" +
+"<tr>" +
+"<th>Id</th>" +
+"<th>Item</th>" +
+"</tr>" +
+"</thead>" +
+"<tbody>" +
+"<tr><td>1</td><td>Oranges</td></tr>" +
+"<tr><td>2</td><td>Apples</td></tr>" +
+"<tr><td>3</td><td>Pears</td></tr>" +
+"<tr><td>4</td><td>Limes</td></tr>" +
+"<tr><td>5</td><td>Lemons</td></tr>" +
+"</tbody>" +
+"</table>"
+</script>
+
+</body>
+</html>
