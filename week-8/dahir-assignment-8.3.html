@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+ ===========================================
+; Title: Assignment 8.3
+; Author: Zach Dahir
+; Date: 01-25-2020
+; Description:Jquery toggle example
+===========================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Exercise 8.3</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- you will need to the href to point to your root directories css file -->
+  <link rel="stylesheet" href="dahir-assignment-8.3.css">
+</head>
+
+<body>
+<div class="bar"></div>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis arcu a accumsan ultricies.
+  Nulla interdum purus nec nibh lobortis efficitur. Praesent vel ante lacus. Mauris facilisis bibendum
+  lorem, sit amet sollicitudin erat commodo vel. Integer ligula quam, tempor ac posuere a, vestibulum
+   nec lorem. Fusce in tortor at arcu cursus tincidunt nec quis metus. In non metus est.
+   Donec porta lorem augue, tempus hendrerit neque feugiat at. Orci varius natoque penatibus et magnis
+   dis parturient montes, nascetur ridiculus mus. Integer sit amet risus at sem tristique iaculis in et
+   velit. Pellentesque pretium dui quis scelerisque molestie. Integer pulvinar tristique lacus, sed scelerisque
+   felis interdum sit amet. Maecenas id metus auctor, vulputate lorem sit amet, accumsan ex. Curabitur dui tellus,
+    euismod quis massa vel, gravida convallis orci. Sed nisl augue, convallis eu faucibus id, convallis nec justo.
+</p>
+<button> Toggle </button>
+<div id="table"></div>
+<script type="text/javascript">
+$("button").click(function(){
+  $("p").toggle();
+})
+
+document.getElementById("table").innerHTML =
+"<table>" +
+"<thead>" +
+"<tr>" +
+"<th> Id </th>" +
+"<th> Type </th>" +
+"</tr>" +
+"</thead>" +
+"<tr> <td><a href='javascript:alert(`Id: 1 Type: Apple`);'>1 </a></td> <td>Apple</td> </tr>" +
+"<tr> <td><a href='javascript:alert(`Id: 2 Type: Watermelon`);'>2 </a></td> <td>Watermelon</td> </tr>" +
+"<tr> <td><a href='javascript:alert(`Id: 3 Type: Grape`);'>3 </a></td> <td>Grape</td> </tr>" +
+"<tr> <td><a href='javascript:alert(`Id: 4 Type: Cherry`);'>4 </a></td> <td>Cherry</td> </tr>" +
+"<tr> <td><a href='javascript:alert(`Id: 5 Type: Pear`);'>5 </a></td> <td>Pear</td> </tr>"
+</script>
+</body>
+</html>

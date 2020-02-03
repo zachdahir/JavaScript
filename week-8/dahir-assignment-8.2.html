@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+ ===========================================
+; Title: Assignment 8.2
+; Author: Zach Dahir
+; Date: 01-25-2020
+; Description:Table of fruits
+===========================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 8.2</title>
+  <style type="text/css">
+
+ul {padding-top: 20px;
+    margin: 0 auto;
+    list-style: none;}
+
+body {font-family: "roboto";
+      font-weight: 400;
+      border-top: 10px solid blueviolet;
+      margin: 0%;
+      padding: 0%;
+      text-align: center;}
+
+  </style>
+</head>
+
+<body>
+<h1>Fruits</h1>
+<div id="fruit"></div>
+
+<script>
+//creating array of fruits
+var fruits = [
+  {
+    id: 1,
+    type: "Apple"
+  },
+  {
+    id: 2,
+    type: "Watermelon"
+  },
+  {
+    id: 3,
+    type: "Grape"
+  },
+  {
+    id: 4,
+    type: "Cheery"
+  },
+  {
+    id: 5,
+    type: "Pear"
+  }
+];
+
+//for loop to iterate through array
+var out = " <ul> ";
+  for (var x = 0; x < fruits.length; x++){
+    out += " <li> " + fruits[x].type + " </li> ";
+  }
+out += " </ul> ";
+
+document.getElementById("fruit").innerHTML = out;
+</script>
+
+</body>
+</html>

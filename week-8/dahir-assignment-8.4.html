@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+ ===========================================
+; Title: Assignment 8.4
+; Author: Zach Dahir
+; Date: 01-28-2020
+; Description:Table of employees, get employee information on click
+===========================================
+-->
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <title>Assignment 8.4</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style type="text/css">
+    #employee tbody tr:hover {
+      cursor: pointer;
+      background-color: #ffff99;
+    }
+  </style>
+</head>
+
+<body>
+<div id="table"></div>
+
+<script type="text/javascript">
+//employee constructor function
+function employee(id, firstName, lastName, title){
+  this.id = id,
+  this.firstName = firstName,
+  this.lastName = lastName,
+  this.title = title
+}
+
+//creating 5 employee objects
+var employees = [
+  new employee(1, "Thomas", "Edison", "Software Engineer"),
+  new employee(2, "Benjamin", "Franklin", "Programmer"),
+  new employee(3, "Nikola", "Tesla", "Project Manager"),
+  new employee(4, "Charles", "Babbage", "Product Manger"),
+  new employee(5, "Alexander", "Bell", "Business Analyst")
+];
+//For loop to create table of employees
+var output = "<table>" +
+"<tr> <th>Id</th> <th>First Name</th> <th>Last Name</th> <th>Title</th> </tr>";
+for (var x = 0; x < employees.length; x++){
+  output += "<tr> <td>" +
+  employees[x].id + "</td> <td> " +
+  employees[x].firstName + "</td> <td> " +
+  employees[x].lastName + "</td> <td> " +
+  employees[x].title + "</td> </tr>"
+}
+ output += "</table>";
+document.getElementById("table").innerHTML = output;
+
+//function to iterate through array and find matching id, then give alert showing employee information
+function getEmployee(id){
+  employees.forEach(function(employee){
+    if (id == employee.id){
+      alert(" Id: " + employee.id + "\n Name: " + employee.firstName + " " + employee.lastName + "\n Title: " + employee.title);
+    };
+  });
+};
+
+//on click find the id of the row and plug it into getEmployee function
+  $(function () {
+    $("table tr").click(function () {
+      var employeeId = $(this).find('td:first').html();
+      getEmployee(employeeId)
+    })
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+table {
+ font-family: "Roboto";
+ font-weight: 400;
+ padding-top: 20px;
+ padding-left: 20px;}
+
+p {
+  font-family: "Roboto";
+  font-weight: 400;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.bar {
+  border-top: 10px solid blueviolet;
+  padding: 0px;
+  margin: 0px;
+}
+
+tr:nth-child(even) {
+  background-color: cyan;
+}
